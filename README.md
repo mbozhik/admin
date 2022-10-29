@@ -1,4 +1,4 @@
-# INTERACTIVE POSTER - a project for learning `JavaScript` 👨‍💻
+# Interactive - a project for learning `JavaScript` 👨‍💻
 
 <pre>
 This project was created to continue the practice of site layout and to learn how to make web animations
