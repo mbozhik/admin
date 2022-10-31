@@ -1,4 +1,4 @@
-body.index {
+body.admin {
   background-color: #0A0A0A;
   color: #DADADA;
   font-family: Helvetica;
@@ -13,10 +13,10 @@ body.index {
           align-items: center;
   min-height: 100vh;
 }
-body.index h1 {
+body.admin h1 {
   font-size: 3.5rem;
 }
-body.index .text-console::after {
+body.admin .text-console::after {
   content: "|";
   -webkit-animation: blink ease 1s infinite;
           animation: blink ease 1s infinite;
@@ -37,4 +37,4 @@ body.index .text-console::after {
     opacity: 1;
   }
 }
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=admin.css.map */
