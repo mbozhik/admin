@@ -13,28 +13,4 @@ body.admin {
           align-items: center;
   min-height: 100vh;
 }
-body.admin h1 {
-  font-size: 3.5rem;
-}
-body.admin .text-console::after {
-  content: "|";
-  -webkit-animation: blink ease 1s infinite;
-          animation: blink ease 1s infinite;
-}
-@-webkit-keyframes blink {
-  0%, 100% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-@keyframes blink {
-  0%, 100% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-}
 /*# sourceMappingURL=admin.css.map */

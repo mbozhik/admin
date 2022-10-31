@@ -14,20 +14,4 @@ body.admin {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-
-    & h1 {
-        font-size: 3.5rem;
-    }
-    .text-console::after {
-        content: "|";
-        animation: blink ease 1s infinite;
-      }
-
-      @keyframes blink {
-        0%, 100% {
-          opacity: 0;
-        } 50% {
-          opacity: 1;
-        }
-      }
 }
