@@ -1,7 +1,7 @@
 body.index {
-  background-color: #0A0A0A;
-  color: #DADADA;
-  font-family: Helvetica;
+  background-color: #0a0a0a;
+  color: #dadada;
+  font-family: "Inter";
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15,6 +15,9 @@ body.index {
 }
 body.index h1 {
   font-size: 3.5rem;
+}
+body.index .text-console {
+  color: #515151;
 }
 body.index .text-console::after {
   content: "|";

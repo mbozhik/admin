@@ -1,33 +1,38 @@
-$black: #0A0A0A;
-$black2: #1E1E1E;
+$black: #0a0a0a;
+$black2: #1e1e1e;
 $black-hov: #141414;
-$white: #DADADA;
+$white: #dadada;
 $white-hov: #868686;
 $grey: #515151;
-$green: #CBFB45;
+$green: #cbfb45;
 
 body.index {
-    background-color: $black;
-    color: $white;
-    font-family: Helvetica;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+   background-color: $black;
+   color: $white;
+   font-family: 'Inter';
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
 
-    & h1 {
-        font-size: 3.5rem;
-    }
-    .text-console::after {
-        content: "|";
-        animation: blink ease 1s infinite;
-      }
+   & h1 {
+      font-size: 3.5rem;
+   }
+   .text-console {
+      color: $grey;
+   }
+   .text-console::after {
+      content: '|';
+      animation: blink ease 1s infinite;
+   }
 
-      @keyframes blink {
-        0%, 100% {
-          opacity: 0;
-        } 50% {
-          opacity: 1;
-        }
+   @keyframes blink {
+      0%,
+      100% {
+         opacity: 0;
       }
+      50% {
+         opacity: 1;
+      }
+   }
 }
