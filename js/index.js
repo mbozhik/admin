@@ -1,79 +1,133 @@
-const confirmLogin = confirm('Log in as an administrator?')
+function renderIndex() {
+  const confirmLogin = confirm('Log in as administrator?')
+  const text = document.querySelector('.text-console')
+  const words = ['run..', 'initialize..', 'log in..']
+  const wordsFail = ['fail login..', 'try again..', 'reload..']
 
-function processingLogin() {
-  if (confirmLogin == true) {
-    console.log('заходи, дядя админ')
-  } else {
-    return false
-  }
-}
-processingLogin()
-// console.log(confirmLogin)
+  function processingLogin() {
+    if (confirmLogin == true) {
+      setTyper(text, words)
 
-// setTimeout(function () {
-//   window.location.href = 'admin.html'
-// }, 6 * 1000)
+      function setTyper(element, words) {
+        const LETTER_TYPE_DELAY = 50
+        const WORD_STAY_DELAY = 500
 
-function renderIndex() {}
-// get the element
-const text = document.querySelector('.text-console')
+        const DIRECTION_FORWARDS = 0
+        const DIRECTION_BACKWARDS = 1
 
-// make a words array
-const words = ['run..', 'loading..', 'initialize..', 'log in..']
+        var direction = DIRECTION_FORWARDS
+        var wordIndex = 0
+        var letterIndex = 0
 
-// start typing effect
-setTyper(text, words)
+        var wordTypeInterval
 
-function setTyper(element, words) {
-  const LETTER_TYPE_DELAY = 50
-  const WORD_STAY_DELAY = 500
+        startTyping()
 
-  const DIRECTION_FORWARDS = 0
-  const DIRECTION_BACKWARDS = 1
+        function startTyping() {
+          wordTypeInterval = setInterval(typeLetter, LETTER_TYPE_DELAY)
+        }
 
-  var direction = DIRECTION_FORWARDS
-  var wordIndex = 0
-  var letterIndex = 0
+        function typeLetter() {
+          const word = words[wordIndex]
 
-  var wordTypeInterval
+          if (direction == DIRECTION_FORWARDS) {
+            letterIndex++
 
-  startTyping()
+            if (letterIndex == word.length) {
+              direction = DIRECTION_BACKWARDS
+              clearInterval(wordTypeInterval)
+              setTimeout(startTyping, WORD_STAY_DELAY)
+            }
+          } else if (direction == DIRECTION_BACKWARDS) {
+            letterIndex--
 
-  function startTyping() {
-    wordTypeInterval = setInterval(typeLetter, LETTER_TYPE_DELAY)
-  }
+            if (letterIndex == 0) {
+              nextWord()
+            }
+          }
 
-  function typeLetter() {
-    const word = words[wordIndex]
+          const textToType = word.substring(0, letterIndex)
 
-    if (direction == DIRECTION_FORWARDS) {
-      letterIndex++
+          element.textContent = textToType
+        }
 
-      if (letterIndex == word.length) {
-        direction = DIRECTION_BACKWARDS
-        clearInterval(wordTypeInterval)
-        setTimeout(startTyping, WORD_STAY_DELAY)
+        function nextWord() {
+          letterIndex = 0
+          direction = DIRECTION_FORWARDS
+          wordIndex++
+
+          if (wordIndex == words.length) {
+            wordIndex = 4
+          }
+        }
       }
-    } else if (direction == DIRECTION_BACKWARDS) {
-      letterIndex--
 
-      if (letterIndex == 0) {
-        nextWord()
+      setTimeout(function () {
+        window.location.href = 'admin.html'
+      }, 5 * 1000)
+    } else {
+      setTyper(text, wordsFail)
+
+      function setTyper(element, words) {
+        const LETTER_TYPE_DELAY = 50
+        const WORD_STAY_DELAY = 500
+
+        const DIRECTION_FORWARDS = 0
+        const DIRECTION_BACKWARDS = 1
+
+        var direction = DIRECTION_FORWARDS
+        var wordIndex = 0
+        var letterIndex = 0
+
+        var wordTypeInterval
+
+        startTyping()
+
+        function startTyping() {
+          wordTypeInterval = setInterval(typeLetter, LETTER_TYPE_DELAY)
+        }
+
+        function typeLetter() {
+          const word = wordsFail[wordIndex]
+
+          if (direction == DIRECTION_FORWARDS) {
+            letterIndex++
+
+            if (letterIndex == word.length) {
+              direction = DIRECTION_BACKWARDS
+              clearInterval(wordTypeInterval)
+              setTimeout(startTyping, WORD_STAY_DELAY)
+            }
+          } else if (direction == DIRECTION_BACKWARDS) {
+            letterIndex--
+
+            if (letterIndex == 0) {
+              nextWord()
+            }
+          }
+
+          const textToType = word.substring(0, letterIndex)
+
+          element.textContent = textToType
+        }
+
+        function nextWord() {
+          letterIndex = 0
+          direction = DIRECTION_FORWARDS
+          wordIndex++
+
+          if (wordIndex == words.length) {
+            wordIndex = 4
+          }
+        }
       }
-    }
 
-    const textToType = word.substring(0, letterIndex)
-
-    element.textContent = textToType
-  }
-
-  function nextWord() {
-    letterIndex = 0
-    direction = DIRECTION_FORWARDS
-    wordIndex++
-
-    if (wordIndex == words.length) {
-      wordIndex = 4
+      setTimeout(function () {
+        location.reload()
+      }, 5 * 1000)
     }
   }
+  processingLogin()
 }
+
+renderIndex()
