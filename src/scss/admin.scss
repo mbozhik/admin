@@ -6,11 +6,127 @@ $white-hov: #868686;
 $grey: #515151;
 $green: #cbfb45;
 
+html.admin,
 body.admin {
    background-color: $black;
    color: $white;
-   font-family: Helvetica;
+   font-family: 'Inter';
+   overflow: hidden;
+   width: 100vw;
+   height: 100vh;
+   display: block;
+   position: relative;
    display: flex;
-   justify-content: center;
    align-items: center;
+
+   * {
+      cursor: none;
+   }
+
+   .index {
+      position: absolute;
+   }
+
+   .cursor {
+      opacity: 0%;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background-color: #fd4e2b;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      z-index: 10000;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      transition: width 0.1s ease-out, height 0.1s ease-out, opacity 0.1s;
+   }
+   .cursorLabel {
+      opacity: 0%;
+      width: 65px;
+      height: 27px;
+      border-radius: 17px;
+      background-color: #fd4e2b;
+      color: white;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      z-index: 10000;
+      font-family: Helvetica;
+      font-size: 18px;
+      text-align: center;
+      padding-top: 7px;
+      transform: translate(9px, -43px);
+      pointer-events: none;
+      transition: width 0.4s ease-out, opacity 0.1s;
+   }
+   .cursorLabel::after {
+      content: 'move';
+   }
+
+   /* КУРСОР ПРЕСС */
+   .objectColorClick {
+      fill: #fff173;
+   }
+   .objectColorClickBGCOLOR {
+      background-color: #fff173;
+   }
+
+   /* КУРСОР КЛИК */
+   .cursorClick {
+      width: 12px;
+      height: 12px;
+      transition: width 0.1s ease-out, height 0.1s ease-out;
+   }
+   .cursorLabelClick {
+      width: 57px;
+      transition: width 0.4s ease-out;
+   }
+   .cursorLabelClickDis {
+      width: 57px;
+      transition: width 0.4s ease-out;
+   }
+   .cursorLabelClick::after {
+      content: 'click';
+   }
+   .cursorLabelClickDis::after {
+      content: 'click';
+      opacity: 60%;
+   }
+
+   /* КУРСОР КЛИК & МУВ */
+   .cursorLabelClickAndMove {
+      width: 123px;
+      transition: width 0.4s ease-out;
+      overflow: hidden;
+   }
+   .cursorLabelClickAndMove::after {
+      content: 'move & click';
+      white-space: nowrap;
+   }
+
+   /* КУРСОР КЛИК & ДРАГ */
+   .cursorLabelDragAndClick {
+      width: 115px;
+      transition: width 0.4s ease-out;
+      overflow: hidden;
+   }
+   .cursorLabelDragAndClick::after {
+      content: 'drag & click';
+      white-space: nowrap;
+   }
+
+   /* КУРСОР РИСОВАЛКА */
+   .cursorDraw {
+      width: 8px;
+      height: 8px;
+      transition: width 0.1s ease-out, height 0.1s ease-out;
+   }
+   .cursorLabelDraw {
+      width: 60px;
+      transition: width 0.4s ease-out;
+   }
+   .cursorLabelDraw::after {
+      content: 'draw';
+   }
 }

@@ -1,14 +1,151 @@
+@charset "UTF-8";
+html.admin,
 body.admin {
   background-color: #0a0a0a;
   color: #dadada;
-  font-family: Helvetica;
+  font-family: "Inter";
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  /* КУРСОР ПРЕСС */
+  /* КУРСОР КЛИК */
+  /* КУРСОР КЛИК & МУВ */
+  /* КУРСОР КЛИК & ДРАГ */
+  /* КУРСОР РИСОВАЛКА */
+}
+html.admin *,
+body.admin * {
+  cursor: none;
+}
+html.admin .index,
+body.admin .index {
+  position: absolute;
+}
+html.admin .cursor,
+body.admin .cursor {
+  opacity: 0%;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #fd4e2b;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 10000;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  pointer-events: none;
+  -webkit-transition: width 0.1s ease-out, height 0.1s ease-out, opacity 0.1s;
+  transition: width 0.1s ease-out, height 0.1s ease-out, opacity 0.1s;
+}
+html.admin .cursorLabel,
+body.admin .cursorLabel {
+  opacity: 0%;
+  width: 65px;
+  height: 27px;
+  border-radius: 17px;
+  background-color: #fd4e2b;
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 10000;
+  font-family: Helvetica;
+  font-size: 18px;
+  text-align: center;
+  padding-top: 7px;
+  -webkit-transform: translate(9px, -43px);
+          transform: translate(9px, -43px);
+  pointer-events: none;
+  -webkit-transition: width 0.4s ease-out, opacity 0.1s;
+  transition: width 0.4s ease-out, opacity 0.1s;
+}
+html.admin .cursorLabel::after,
+body.admin .cursorLabel::after {
+  content: "move";
+}
+html.admin .objectColorClick,
+body.admin .objectColorClick {
+  fill: #fff173;
+}
+html.admin .objectColorClickBGCOLOR,
+body.admin .objectColorClickBGCOLOR {
+  background-color: #fff173;
+}
+html.admin .cursorClick,
+body.admin .cursorClick {
+  width: 12px;
+  height: 12px;
+  -webkit-transition: width 0.1s ease-out, height 0.1s ease-out;
+  transition: width 0.1s ease-out, height 0.1s ease-out;
+}
+html.admin .cursorLabelClick,
+body.admin .cursorLabelClick {
+  width: 57px;
+  -webkit-transition: width 0.4s ease-out;
+  transition: width 0.4s ease-out;
+}
+html.admin .cursorLabelClickDis,
+body.admin .cursorLabelClickDis {
+  width: 57px;
+  -webkit-transition: width 0.4s ease-out;
+  transition: width 0.4s ease-out;
+}
+html.admin .cursorLabelClick::after,
+body.admin .cursorLabelClick::after {
+  content: "click";
+}
+html.admin .cursorLabelClickDis::after,
+body.admin .cursorLabelClickDis::after {
+  content: "click";
+  opacity: 60%;
+}
+html.admin .cursorLabelClickAndMove,
+body.admin .cursorLabelClickAndMove {
+  width: 123px;
+  -webkit-transition: width 0.4s ease-out;
+  transition: width 0.4s ease-out;
+  overflow: hidden;
+}
+html.admin .cursorLabelClickAndMove::after,
+body.admin .cursorLabelClickAndMove::after {
+  content: "move & click";
+  white-space: nowrap;
+}
+html.admin .cursorLabelDragAndClick,
+body.admin .cursorLabelDragAndClick {
+  width: 115px;
+  -webkit-transition: width 0.4s ease-out;
+  transition: width 0.4s ease-out;
+  overflow: hidden;
+}
+html.admin .cursorLabelDragAndClick::after,
+body.admin .cursorLabelDragAndClick::after {
+  content: "drag & click";
+  white-space: nowrap;
+}
+html.admin .cursorDraw,
+body.admin .cursorDraw {
+  width: 8px;
+  height: 8px;
+  -webkit-transition: width 0.1s ease-out, height 0.1s ease-out;
+  transition: width 0.1s ease-out, height 0.1s ease-out;
+}
+html.admin .cursorLabelDraw,
+body.admin .cursorLabelDraw {
+  width: 60px;
+  -webkit-transition: width 0.4s ease-out;
+  transition: width 0.4s ease-out;
+}
+html.admin .cursorLabelDraw::after,
+body.admin .cursorLabelDraw::after {
+  content: "draw";
 }
