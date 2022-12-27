@@ -64,7 +64,7 @@ function renderIndex() {
 
          setTimeout(function () {
             window.location.href = 'admin.html'
-         }, 5 * 1000)
+         }, 4 * 1000)
       } else {
          setTyper(text, wordsFail)
 
