@@ -2,6 +2,13 @@
 @import 'css/index.css';
 @import 'css/admin.css';
 
+:root {
+   --black: #0a0a0a;
+   --white: #eee;
+   --grey: #515151;
+   --color: #cbfb45;
+}
+
 @font-face {
    font-family: 'Inter';
    src: url('fonts/Inter-Thin.woff2') format('woff2'), url('fonts/Inter-Thin.woff') format('woff');

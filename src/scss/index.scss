@@ -1,14 +1,6 @@
-$black: #0a0a0a;
-$black2: #1e1e1e;
-$black-hov: #141414;
-$white: #dadada;
-$white-hov: #868686;
-$grey: #515151;
-$green: #cbfb45;
-
 body.index {
-   background-color: $black;
-   color: $white;
+   background-color: var(--black);
+   color: var(--white);
    font-family: 'Inter';
    display: flex;
    justify-content: center;
@@ -19,7 +11,7 @@ body.index {
       font-size: 3.5rem;
    }
    .text-console {
-      color: $white;
+      color: var(--white);
    }
    .text-console::after {
       content: '|';
