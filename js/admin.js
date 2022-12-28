@@ -1,6 +1,6 @@
 const wrapper = document.getElementById('wrapper');
 
-wrapper.style.transform = 'translate(-25%, -25%)';
+wrapper.style.transform = 'translate(-25%, -25%)'; // set start position
 
 window.onmousemove = (e) => {
    const mouseX = e.clientX,
@@ -20,7 +20,7 @@ window.onmousemove = (e) => {
          transform: `translate(${panX}px, ${panY}px)`
       },
       {
-         duration: 4000,
+         duration: 6000,
          fill: 'forwards',
          easing: 'ease'
       }
