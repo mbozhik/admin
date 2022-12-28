@@ -1,6 +1,11 @@
-const wrapper = document.getElementById('wrapper');
-const user = document.getElementById('user');
+const adminText = document.getElementById('user');
+let adminLogin = prompt('Enter your admin login:');
 
+if (adminLogin) {
+   adminText.textContent = 'Welcome, ' + adminLogin + '!';
+}
+
+const wrapper = document.getElementById('wrapper');
 wrapper.style.transform = 'translate(-22.5%, -40%)'; // set start position
 
 window.onmousemove = (e) => {
