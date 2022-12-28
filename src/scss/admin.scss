@@ -21,7 +21,7 @@ body.admin {
       width: 150vmax;
       position: absolute;
 
-      #user {
+      .admin-data {
          position: absolute;
          width: 50vw;
          top: 50%;
@@ -30,9 +30,27 @@ body.admin {
          z-index: 10;
          pointer-events: none;
          transform-origin: 50% 50%;
-         font-size: 4vw;
-         font-weight: 600;
-         text-align: center;
+
+         #user {
+            font-size: 4vw;
+            font-weight: 600;
+            text-align: center;
+
+            span {
+               color: var(--siren);
+               text-transform: uppercase;
+            }
+         }
+
+         #ip {
+            font-size: 2vw;
+            font-weight: 400;
+            text-align: center;
+
+            span {
+               color: var(--siren);
+            }
+         }
       }
 
       .machine {

@@ -2,7 +2,9 @@ const adminText = document.getElementById('user');
 let adminLogin = prompt('Enter your admin login:', 'admin');
 
 if (adminLogin) {
-   adminText.textContent = 'Welcome, ' + adminLogin + '!';
+   adminText.innerHTML = 'Welcome, ' + `<span>${adminLogin}</span>` + '!';
+} else {
+   adminText.innerHTML = 'Welcome, <span>unknown!</span>';
 }
 
 const wrapper = document.getElementById('wrapper');
