@@ -1,7 +1,7 @@
 const wrapper = document.getElementById('wrapper');
 const user = document.getElementById('user');
 
-wrapper.style.transform = 'translate(-25%, -25%)'; // set start position
+wrapper.style.transform = 'translate(-22.5%, -40%)'; // set start position
 
 window.onmousemove = (e) => {
    const mouseX = e.clientX,

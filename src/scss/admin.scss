@@ -27,8 +27,8 @@ body.admin {
          position: absolute;
          top: 50%;
          left: 50%;
-         transform: translate(0%, -250%);
-         z-index: 0;
+         transform: translate(-10%, 100%);
+         z-index: 10;
          pointer-events: none;
          transform-origin: 50% 50%;
       }
@@ -100,7 +100,7 @@ body.admin {
             background-color: rgb(255, 167, 38);
             height: 24%;
             width: 24%;
-            left: 68%;
+            left: 188%;
             top: 8%;
          }
 
