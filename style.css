@@ -5,8 +5,12 @@
 :root {
    --black: #0a0a0a;
    --white: #eee;
-   --grey: #515151;
-   --color: #cbfb45;
+   --dust: #515151;
+   --sprite: #46ff7a;
+   --siren: #9146ff;
+   --orange: #ff6746;
+   --pig: #ff46c0;
+   --sun: #dfe15e;
 }
 
 @font-face {

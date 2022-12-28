@@ -7,19 +7,21 @@ body.index {
    align-items: center;
    min-height: 100vh;
 
-   & h1 {
-      font-size: 3.5rem;
-   }
    .text-console {
       color: var(--white);
-   }
-   .text-console::after {
-      content: '|';
-      animation: blink ease 1s infinite;
+      font-size: 3.5rem;
+
+      &:hover {
+         color: var(--siren);
+      }
+
+      &::after {
+         content: '|';
+         animation: blink ease 1s infinite;
+      }
    }
 
    @keyframes blink {
-      0%,
       100% {
          opacity: 0;
       }
