@@ -1,4 +1,5 @@
 const wrapper = document.getElementById('wrapper');
+const user = document.getElementById('user');
 
 wrapper.style.transform = 'translate(-25%, -25%)'; // set start position
 

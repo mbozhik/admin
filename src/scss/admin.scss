@@ -23,10 +23,11 @@ body.admin {
 
       #user {
          font-size: 4vw;
+         font-weight: 600;
          position: absolute;
          top: 50%;
          left: 50%;
-         transform: translate(-50%, -50%);
+         transform: translate(0%, -250%);
          z-index: 0;
          pointer-events: none;
          transform-origin: 50% 50%;
