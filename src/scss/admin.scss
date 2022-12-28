@@ -22,15 +22,17 @@ body.admin {
       position: absolute;
 
       #user {
-         font-size: 4vw;
-         font-weight: 600;
          position: absolute;
+         width: 50vw;
          top: 50%;
          left: 50%;
          transform: translate(-50%, 100%);
          z-index: 10;
          pointer-events: none;
          transform-origin: 50% 50%;
+         font-size: 4vw;
+         font-weight: 600;
+         text-align: center;
       }
 
       .machine {
@@ -72,13 +74,13 @@ body.admin {
          &:nth-child(3) {
             background-color: var(--orange);
             left: 12%;
-            top: 34%;
+            top: 28%;
          }
 
          &:nth-child(4) {
             background-color: var(--pig);
-            left: 45%;
-            top: 48%;
+            left: 80%;
+            top: 50%;
          }
 
          &:nth-child(5) {
