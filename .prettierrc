@@ -4,7 +4,6 @@
    "tabWidth": 3,
    "printWidth": 1000,
    "proseWrap": "never",
-   "semi": false,
    "singleQuote": true,
    "bracketSpacing": true
 }

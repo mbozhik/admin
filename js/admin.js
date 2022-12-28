@@ -1,7 +1,28 @@
-// let container = document.querySelector('.container')
-// let canvas = document.querySelector('.canvas')
-// container.addEventListener('mousemove', (e) => {
-//    let x = e.clientX - container.getBoundingClientRect().left
-//    let y = e.clientY - container.getBoundingClientRect().top
-//    canvas.style.transform = `translate(-${x}px, -${y * 1.5}px)`
-// })
+const wrapper = document.getElementById('wrapper');
+
+wrapper.style.transform = 'translate(-25%, -25%)';
+
+window.onmousemove = (e) => {
+   const mouseX = e.clientX,
+      mouseY = e.clientY;
+
+   const xDecimal = mouseX / window.innerWidth,
+      yDecimal = mouseY / window.innerHeight;
+
+   const maxX = wrapper.offsetWidth - window.innerWidth,
+      maxY = wrapper.offsetHeight - window.innerHeight;
+
+   const panX = maxX * xDecimal * -1,
+      panY = maxY * yDecimal * -1;
+
+   wrapper.animate(
+      {
+         transform: `translate(${panX}px, ${panY}px)`
+      },
+      {
+         duration: 4000,
+         fill: 'forwards',
+         easing: 'ease'
+      }
+   );
+};
