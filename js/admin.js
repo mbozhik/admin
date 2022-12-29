@@ -7,6 +7,13 @@ if (adminLogin) {
    adminText.innerHTML = 'Welcome, <span>unknown!</span>';
 }
 
+fetch('https://api.ipify.org?format=json')
+   .then((response) => response.json())
+   .then((data) => {
+      const ip = data.ip; // The user's IP address
+      document.querySelector('#ip').innerHTML = `IP: ${ip}`;
+   });
+
 const wrapper = document.getElementById('wrapper');
 wrapper.style.transform = 'translate(-17%, -40%)'; // set start position
 
