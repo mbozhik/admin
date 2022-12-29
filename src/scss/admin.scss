@@ -23,10 +23,9 @@ body.admin {
 
       .admin-data {
          position: absolute;
-         width: 50vw;
-         top: 50%;
+         top: 42.5%;
          left: 50%;
-         transform: translate(-50%, 100%);
+         transform: translate(-49%, 100%);
          z-index: 10;
          pointer-events: none;
          transform-origin: 50% 50%;
@@ -35,34 +34,34 @@ body.admin {
             font-size: 4vw;
             font-weight: 600;
             text-align: center;
+            line-height: 100%;
 
             span {
                color: var(--siren);
             }
          }
 
-         .user-location {
+         .user-data {
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: center;
+            gap: 0.5vw;
+            margin: 0 auto;
          }
 
          h2 {
-            font-size: 2vw;
+            font-size: 1.5vw;
             font-weight: 400;
             text-align: center;
+
+            &:hover {
+               color: var(--siren);
+            }
 
             span {
                color: var(--siren);
+               font-size: 4vw;
             }
-         }
-
-         #mobile,
-         #system,
-         #browser {
-            font-size: 2vw;
-            font-weight: 400;
-            text-align: center;
          }
       }
 
