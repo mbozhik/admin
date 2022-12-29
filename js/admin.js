@@ -1,3 +1,6 @@
+const wrapper = document.getElementById('wrapper');
+wrapper.style.transform = 'translate(-17%, -40%)'; // set start position
+
 const adminText = document.getElementById('user');
 let adminLogin = prompt('Enter your admin login:', 'admin');
 
@@ -7,15 +10,35 @@ if (adminLogin) {
    adminText.innerHTML = 'Welcome, <span>unknown!</span>';
 }
 
-fetch('https://api.ipify.org?format=json')
+function userInfo() {
+   const isMobile = navigator.userAgentData.mobile;
+   const whatSystem = navigator.userAgentData.platform;
+   const whatBrowserObj = navigator.userAgentData.brands[1];
+   const whatBrowser = Object.values(whatBrowserObj)[0];
+
+   if (isMobile == true) {
+      document.getElementById('mobile').innerHTML = `Mobile`;
+   } else {
+      document.getElementById('mobile').innerHTML = `Desktop`;
+   }
+   document.getElementById('system').innerHTML = `${whatSystem}`;
+   document.getElementById('browser').innerHTML = `${whatBrowser}`;
+}
+
+userInfo();
+
+fetch('https://ipapi.co/json/')
    .then((response) => response.json())
    .then((data) => {
       const ip = data.ip; // The user's IP address
+      const city = data.city; // The user's city
+      const country = data.country_name; // The user's country
+      const countryCode = data.country; // The user's country code
       document.querySelector('#ip').innerHTML = `IP: ${ip}`;
+      document.querySelector('#city').innerHTML = `Your city is: ${city}`;
+      document.querySelector('#country').innerHTML = `Your country is: ${country}`;
+      document.querySelector('#countryCode').innerHTML = `Your country code is: ${countryCode}`;
    });
-
-const wrapper = document.getElementById('wrapper');
-wrapper.style.transform = 'translate(-17%, -40%)'; // set start position
 
 window.onmousemove = (e) => {
    const mouseX = e.clientX,

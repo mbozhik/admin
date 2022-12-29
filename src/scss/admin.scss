@@ -41,7 +41,13 @@ body.admin {
             }
          }
 
-         #ip {
+         .user-location {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+         }
+
+         h2 {
             font-size: 2vw;
             font-weight: 400;
             text-align: center;
@@ -49,6 +55,14 @@ body.admin {
             span {
                color: var(--siren);
             }
+         }
+
+         #mobile,
+         #system,
+         #browser {
+            font-size: 2vw;
+            font-weight: 400;
+            text-align: center;
          }
       }
 
