@@ -1,16 +1,17 @@
 const wrapper = document.getElementById('wrapper');
-wrapper.style.transform = 'translate(-17%, -40%)'; // set start position
+wrapper.style.transform = 'translate(-17%, -40%)';
 
 function adminLogin() {
    const adminText = document.getElementById('user');
-   let adminLogin = prompt('Enter your admin login:', 'admin');
+   let adminLogIn = prompt('Enter your admin login:', 'admin');
 
-   if (adminLogin) {
-      adminText.innerHTML = 'Welcome, ' + `<span>${adminLogin}</span>` + '!';
+   if (adminLogIn) {
+      adminText.innerHTML = 'Welcome, ' + `<span>${adminLogIn}</span>` + '!';
    } else {
       adminText.innerHTML = 'Welcome, <span>unknown!</span>';
    }
 }
+
 adminLogin();
 
 function userInfo() {

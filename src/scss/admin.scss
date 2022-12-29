@@ -50,6 +50,26 @@ body.admin {
          z-index: 10;
          pointer-events: none;
          transform-origin: 50% 50%;
+         opacity: 0.25;
+         animation: appear 2s ease forwards;
+         transition: all 1s ease;
+
+         @keyframes appear {
+            0% {
+               opacity: 0;
+            }
+            80% {
+               opacity: 0;
+               transform: scale(1);
+            }
+            90% {
+               transform: scale(1.05);
+            }
+            100% {
+               opacity: 0.25;
+               transform: scale(1);
+            }
+         }
 
          #user {
             font-size: 4vw;
@@ -76,7 +96,7 @@ body.admin {
             text-align: center;
 
             span {
-               color: var(--siren);
+               // color: var(--siren);
                font-size: 4vw;
             }
          }
