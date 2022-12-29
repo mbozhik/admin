@@ -10,6 +10,11 @@ function adminLogin() {
    } else {
       adminText.innerHTML = 'Welcome, <span>unknown!</span>';
    }
+
+   const adminData = document.querySelector('.admin-data');
+   setTimeout(() => {
+      adminText.innerHTML = `${adminLogIn}`;
+   }, 3000);
 }
 
 adminLogin();

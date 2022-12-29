@@ -21,7 +21,7 @@ body.admin {
       top: 37.5%;
       left: 50%;
       transform: translate(-49%, 100%);
-      z-index: 10;
+      z-index: -1;
       pointer-events: none;
       transform-origin: 50% 50%;
 
@@ -30,6 +30,7 @@ body.admin {
          font-weight: 600;
          text-align: center;
          line-height: 100%;
+         color: var(--white);
 
          span {
             color: var(--siren);
@@ -50,9 +51,7 @@ body.admin {
          z-index: 10;
          pointer-events: none;
          transform-origin: 50% 50%;
-         opacity: 0.25;
          animation: appear 2s ease forwards;
-         transition: all 1s ease;
 
          @keyframes appear {
             0% {
@@ -60,14 +59,9 @@ body.admin {
             }
             80% {
                opacity: 0;
-               transform: scale(1);
-            }
-            90% {
-               transform: scale(1.05);
             }
             100% {
-               opacity: 0.25;
-               transform: scale(1);
+               opacity: 0.15;
             }
          }
 
