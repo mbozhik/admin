@@ -129,11 +129,11 @@ body.admin {
             }
          }
 
-         &:nth-child(1) {
-            background-color: var(--night);
-            left: 5%;
-            top: 5%;
-         }
+         // &:nth-child(1) {
+         //    background-color: var(--night);
+         //    left: 5%;
+         //    top: 5%;
+         // }
 
          &:nth-child(2) {
             background-color: var(--night);
@@ -150,13 +150,19 @@ body.admin {
          &:nth-child(4) {
             background-color: var(--night);
             left: 67%;
-            top: 50%;
+            top: 47%;
          }
 
          &:nth-child(5) {
             background-color: var(--night);
             left: 5%;
             top: 68%;
+         }
+
+         &:nth-child(6) {
+            background-color: var(--night);
+            left: 60%;
+            top: 73%;
          }
       }
    }
