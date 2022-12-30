@@ -51,7 +51,7 @@ body.admin {
          z-index: 10;
          pointer-events: none;
          transform-origin: 50% 50%;
-         animation: appear 2s ease forwards;
+         animation: appear 1.5s ease forwards;
 
          @keyframes appear {
             0% {
@@ -106,6 +106,10 @@ body.admin {
             transform: scale(1.05);
          }
 
+         &:hover #user {
+            color: var(--siren);
+         }
+
          & > img {
             height: 100%;
             width: 100%;
@@ -128,26 +132,26 @@ body.admin {
 
          &:nth-child(2) {
             background-color: var(--siren);
-            left: 42%;
-            top: 12%;
+            left: 45%;
+            top: 15%;
          }
 
          &:nth-child(3) {
             background-color: var(--orange);
-            left: 12%;
-            top: 28%;
+            left: 13%;
+            top: 25%;
          }
 
          &:nth-child(4) {
             background-color: var(--pig);
-            left: 80%;
+            left: 70%;
             top: 50%;
          }
 
          &:nth-child(5) {
             background-color: var(--sun);
-            left: 8%;
-            top: 70%;
+            left: 5%;
+            top: 68%;
          }
       }
    }
