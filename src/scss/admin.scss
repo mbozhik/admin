@@ -113,18 +113,20 @@ body.admin {
             color: var(--siren);
          }
 
-         & > img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            border-radius: inherit;
-            opacity: 0;
-            transition: opacity 800ms ease, transform 800ms ease;
-         }
+         a {
+            & > img {
+               height: 100%;
+               width: 100%;
+               object-fit: cover;
+               border-radius: inherit;
+               opacity: 0;
+               transition: opacity 800ms ease, transform 800ms ease;
+            }
 
-         &:hover > img {
-            opacity: 1;
-            transform: scale(1.01);
+            &:hover > img {
+               opacity: 1;
+               transform: scale(1.01);
+            }
          }
 
          &:nth-child(1) {
