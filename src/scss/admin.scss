@@ -56,12 +56,15 @@ body.admin {
          @keyframes appear {
             0% {
                opacity: 0;
+               color: var(--black);
             }
             80% {
                opacity: 0;
+               color: var(--black);
             }
             100% {
-               opacity: 0.15;
+               opacity: 1;
+               color: var(--night);
             }
          }
 
@@ -125,31 +128,31 @@ body.admin {
          }
 
          &:nth-child(1) {
-            background-color: var(--sprite);
+            background-color: var(--night);
             left: 5%;
             top: 5%;
          }
 
          &:nth-child(2) {
-            background-color: var(--siren);
+            background-color: var(--night);
             left: 45%;
             top: 15%;
          }
 
          &:nth-child(3) {
-            background-color: var(--orange);
+            background-color: var(--night);
             left: 13%;
             top: 25%;
          }
 
          &:nth-child(4) {
-            background-color: var(--pig);
-            left: 70%;
+            background-color: var(--night);
+            left: 67%;
             top: 50%;
          }
 
          &:nth-child(5) {
-            background-color: var(--sun);
+            background-color: var(--night);
             left: 5%;
             top: 68%;
          }
