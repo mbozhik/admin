@@ -167,55 +167,49 @@ body.admin {
       }
    }
 
-   // body.menu-toggled > .meta-link > span {
-   //    color: rgb(30, 30, 30);
-   // }
+   #log-out {
+      left: 1vw;
+      bottom: 1vw;
 
-   // #source-link {
-   //    bottom: 60px;
-   // }
+      i {
+         color: var(--siren);
+      }
+   }
 
-   // #source-link > i {
-   //    color: rgb(94, 106, 210);
-   // }
+   .meta-link {
+      align-items: center;
+      backdrop-filter: blur(3px);
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 6px;
+      bottom: 10px;
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      display: inline-flex;
+      gap: 0.5vw;
+      left: 10px;
+      padding: 0.6vw 1vw;
+      position: fixed;
+      text-decoration: none;
+      transition: background-color 400ms, border-color 400ms;
+      z-index: 10000;
 
-   // #yt-link > i {
-   //    color: rgb(239, 83, 80);
-   // }
+      &:hover {
+         background-color: rgba(255, 255, 255, 0.1);
+         border: 1px solid rgba(255, 255, 255, 0.2);
+      }
 
-   // .meta-link {
-   //    align-items: center;
-   //    backdrop-filter: blur(3px);
-   //    background-color: rgba(255, 255, 255, 0.05);
-   //    border: 1px solid rgba(255, 255, 255, 0.1);
-   //    border-radius: 6px;
-   //    bottom: 10px;
-   //    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-   //    cursor: pointer;
-   //    display: inline-flex;
-   //    gap: 5px;
-   //    left: 10px;
-   //    padding: 10px 20px;
-   //    position: fixed;
-   //    text-decoration: none;
-   //    transition: background-color 400ms, border-color 400ms;
-   //    z-index: 10000;
-   // }
+      i,
+      span {
+         height: 1vw;
+         line-height: 1vw;
+      }
 
-   // .meta-link:hover {
-   //    background-color: rgba(255, 255, 255, 0.1);
-   //    border: 1px solid rgba(255, 255, 255, 0.2);
-   // }
-
-   // .meta-link > i,
-   // .meta-link > span {
-   //    height: 20px;
-   //    line-height: 20px;
-   // }
-
-   // .meta-link > span {
-   //    color: white;
-   //    font-family: 'Rubik', sans-serif;
-   //    font-weight: 500;
-   // }
+      span {
+         margin-left: 0.5vw;
+         color: var(--white);
+         font-family: 'Inter', sans-serif;
+         font-weight: 600;
+      }
+   }
 }
