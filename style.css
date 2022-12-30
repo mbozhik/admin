@@ -1,6 +1,7 @@
 @import 'css/reboot.css';
 @import 'css/index.css';
 @import 'css/admin.css';
+@import 'css/pages.css';
 
 :root {
    --black: #0a0a0a;

@@ -1,0 +1,9 @@
+body.multiple {
+   background-color: var(--black);
+   color: var(--white);
+   font-family: 'Inter';
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+}
