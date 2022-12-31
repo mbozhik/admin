@@ -2,8 +2,21 @@ body.multiple {
    background-color: var(--black);
    color: var(--white);
    font-family: 'Inter';
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   min-height: 100vh;
+   height: 100vh;
+   margin: 0px;
+   overflow: hidden;
+
+   .image {
+      width: 40vmin;
+      position: absolute;
+      transform: translate(-50%, -50%);
+
+      &[data-status='inactive'] {
+         display: none;
+      }
+
+      &[data-status='active'] {
+         display: block;
+      }
+   }
 }
