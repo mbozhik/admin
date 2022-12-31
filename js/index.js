@@ -62,7 +62,7 @@ function processingLogin() {
       }
 
       setTimeout(function () {
-         window.location.href = 'admin.html';
+         window.location.href = 'dashboard.html';
       }, 4 * 1000);
    } else {
       setTyper(text, wordsFail);
