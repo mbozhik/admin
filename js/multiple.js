@@ -44,7 +44,7 @@ function endMultiple() {
    setTimeout(() => {
       const images = document.getElementsByClassName('image');
       for (let i = 0; i < images.length; i++) {
-         images[i].style.transition = 'opacity 0.25s ease';
+         // images[i].style.transition = 'opacity 0.25s ease';
          images[i].style.opacity = 0;
       }
    }, 500);
