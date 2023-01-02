@@ -6,6 +6,8 @@ body.machine {
    margin: 0px;
    overflow: hidden;
 
+   // multiple page
+
    .image {
       width: 40vmin;
       position: absolute;
@@ -18,6 +20,17 @@ body.machine {
       &[data-status='active'] {
          display: block;
       }
+   }
+
+   // shift page
+
+   #virus {
+      position: fixed;
+      width: 20vw;
+   }
+
+   .hidden {
+      display: none;
    }
 
    #dashboard,
