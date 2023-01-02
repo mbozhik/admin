@@ -1,7 +1,7 @@
 body.index {
    background-color: var(--black);
    color: var(--white);
-   font-family: 'Inter';
+   font-family: 'Inter', sans-serif;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -11,9 +11,9 @@ body.index {
       color: var(--white);
       font-size: 3.5rem;
 
-      &:hover {
-         color: var(--siren);
-      }
+      // &:hover {
+      //    color: var(--siren);
+      // }
 
       &::after {
          content: '|';
