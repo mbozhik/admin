@@ -2,8 +2,6 @@ const miner = document.getElementById('miner');
 const fix = document.getElementById('miner-fix');
 const next = document.getElementById('next-machine');
 
-fix.style.visibility = 'hidden';
-
 document.addEventListener('mousemove', function (event) {
    miner.style.top = event.clientY - 225 + 'px';
    miner.style.left = event.clientX - 225 + 'px';
@@ -25,7 +23,7 @@ function endStick() {
 
    setInterval(() => {
       next.classList.add('scaled');
-   }, 4000);
+   }, 4100);
 }
 
 const button = document.getElementById('fix-this');
