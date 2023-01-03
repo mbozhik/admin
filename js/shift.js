@@ -23,3 +23,13 @@ element.addEventListener('mouseenter', function () {
       element.classList.add('move');
    }, 2500);
 });
+
+function endShift() {
+   setTimeout(() => {
+      const element = document.getElementById('virus');
+      element.style.opacity = 0;
+   }, 500);
+}
+
+const button = document.getElementById('fix-this');
+button.addEventListener('click', endShift);
