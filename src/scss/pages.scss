@@ -56,6 +56,47 @@ body.machine {
 
    //stick page
 
+   #miner {
+      position: absolute;
+      width: 25vw;
+      animation: shake 0.25s ease infinite, cursor 2.5s ease infinite;
+   }
+
+   @keyframes shake {
+      0% {
+         transform: translate(0, 0);
+      }
+      25% {
+         transform: translate(-10px, -10px);
+      }
+      50% {
+         transform: translate(10px, 10px);
+      }
+      75% {
+         transform: translate(-5px, -5px);
+      }
+      100% {
+         transform: translate(0, 0);
+      }
+   }
+   @keyframes cursor {
+      0% {
+         cursor: none;
+      }
+      25% {
+         cursor: text;
+      }
+      50% {
+         cursor: s-resize;
+      }
+      75% {
+         cursor: pointer;
+      }
+      100% {
+         cursor: wait;
+      }
+   }
+
    // buttons panel
 
    #dashboard,
