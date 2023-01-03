@@ -181,6 +181,27 @@ body.machine {
       }
    }
 
+   .scaled {
+      animation: scale 2s ease infinite;
+      animation-iteration-count: 2;
+
+      @keyframes scale {
+         0% {
+            transform: scale(1);
+         }
+         15% {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px 1px #9046ff60;
+         }
+         30% {
+            transform: scale(1);
+         }
+         100% {
+            transform: scale(1);
+         }
+      }
+   }
+
    .meta-link {
       align-items: center;
       backdrop-filter: blur(3px);

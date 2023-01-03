@@ -1,5 +1,7 @@
 const miner = document.getElementById('miner');
 const fix = document.getElementById('miner-fix');
+const next = document.getElementById('next-machine');
+
 fix.style.display = 'none';
 
 document.addEventListener('mousemove', function (event) {
@@ -17,6 +19,10 @@ function endShift() {
    setTimeout(() => {
       fix.style.display = 'none';
    }, 3900);
+
+   setInterval(() => {
+      next.classList.add('scaled');
+   }, 4000);
 }
 
 const button = document.getElementById('fix-this');

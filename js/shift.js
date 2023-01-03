@@ -1,4 +1,7 @@
 const virus = document.getElementById('virus');
+const fix = document.getElementById('virus-fix');
+
+fix.style.display = 'none';
 
 virus.addEventListener('mouseenter', function () {
    virus.classList.add('move');
@@ -26,10 +29,25 @@ virus.addEventListener('mouseenter', function () {
 
 function endShift() {
    setTimeout(() => {
-      const virus = document.getElementById('virus');
       virus.style.opacity = 0;
+      fix.style.display = 'block';
+      fix.src = 'img/shift-fix.gif';
    }, 500);
+
+   setTimeout(() => {
+      fix.style.display = 'none';
+   }, 3900);
 }
 
 const button = document.getElementById('fix-this');
 button.addEventListener('click', endShift);
+
+function endShift() {
+   setTimeout(() => {
+      miner.style.opacity = 0;
+   }, 500);
+
+   setTimeout(() => {
+      fix.style.display = 'none';
+   }, 3900);
+}
