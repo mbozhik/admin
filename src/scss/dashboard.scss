@@ -51,9 +51,9 @@ body.dashboard {
          z-index: 10;
          pointer-events: none;
          transform-origin: 50% 50%;
-         animation: appear 1.5s ease forwards;
+         animation: uncolorize 1.5s ease forwards;
 
-         @keyframes appear {
+         @keyframes uncolorize {
             0% {
                opacity: 0;
                color: var(--black);
