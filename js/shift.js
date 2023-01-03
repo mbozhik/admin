@@ -1,33 +1,33 @@
-const element = document.getElementById('virus');
+const virus = document.getElementById('virus');
 
-element.addEventListener('mouseenter', function () {
-   element.classList.add('move');
+virus.addEventListener('mouseenter', function () {
+   virus.classList.add('move');
    setTimeout(function () {
-      element.classList.remove('move');
-      element.classList.add('move2');
+      virus.classList.remove('move');
+      virus.classList.add('move2');
    }, 500);
    setTimeout(function () {
-      element.classList.remove('move2');
-      element.classList.add('move3');
+      virus.classList.remove('move2');
+      virus.classList.add('move3');
    }, 1000);
    setTimeout(function () {
-      element.classList.remove('move3');
-      element.classList.add('move4');
+      virus.classList.remove('move3');
+      virus.classList.add('move4');
    }, 1500);
    setTimeout(function () {
-      element.classList.remove('move4');
-      element.classList.add('move5');
+      virus.classList.remove('move4');
+      virus.classList.add('move5');
    }, 2000);
    setTimeout(function () {
-      element.classList.remove('move5');
-      element.classList.add('move');
+      virus.classList.remove('move5');
+      virus.classList.add('move');
    }, 2500);
 });
 
 function endShift() {
    setTimeout(() => {
-      const element = document.getElementById('virus');
-      element.style.opacity = 0;
+      const virus = document.getElementById('virus');
+      virus.style.opacity = 0;
    }, 500);
 }
 
