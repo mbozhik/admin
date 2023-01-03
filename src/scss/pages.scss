@@ -59,7 +59,19 @@ body.machine {
    #miner {
       position: absolute;
       width: 25vw;
-      animation: shake 0.25s ease infinite, cursor 2.5s ease infinite;
+      animation: appear 2s ease, shake 0.25s ease infinite, cursor 2.5s ease infinite;
+   }
+
+   @keyframes appear {
+      0% {
+         opacity: 0;
+      }
+      75% {
+         opacity: 0;
+      }
+      100% {
+         opacity: 1;
+      }
    }
 
    @keyframes shake {
