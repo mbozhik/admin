@@ -11,10 +11,13 @@ document.addEventListener('mousemove', function (event) {
 
 function endStick() {
    setTimeout(() => {
-      miner.style.opacity = 0;
       fix.style.visibility = 'visible';
       fix.src = 'img/stick-fix.gif';
    }, 500);
+
+   setTimeout(() => {
+      miner.style.opacity = 0;
+   }, 3000);
 
    setTimeout(() => {
       fix.style.visibility = 'hidden';
