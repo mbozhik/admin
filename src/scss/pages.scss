@@ -2,12 +2,12 @@ body.machine {
    background-color: var(--black);
    color: var(--white);
    font-family: 'Inter';
-   height: 100vh;
+   height: 100%;
    margin: 0px;
    overflow: hidden;
 
    .desktop {
-      margin: 6vw 0 0 1vw;
+      margin: 3vw 0 0 1vw;
       width: 15%;
       display: flex;
       flex-direction: column;
@@ -183,7 +183,7 @@ body.machine {
 
    .scaled {
       animation: scale 2s ease infinite;
-      animation-iteration-count: 2;
+      animation-iteration-count: 3;
 
       @keyframes scale {
          0% {
@@ -223,7 +223,7 @@ body.machine {
       z-index: 10000;
 
       &:hover {
-         background-color: rgba(255, 255, 255, 0.5);
+         background-color: rgba(255, 255, 255, 0.1);
          border: 1px solid rgba(255, 255, 255, 0.2);
          color: var(--siren);
       }
