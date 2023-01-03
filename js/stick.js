@@ -9,7 +9,7 @@ document.addEventListener('mousemove', function (event) {
    miner.style.left = event.clientX - 225 + 'px';
 });
 
-function endShift() {
+function endStick() {
    setTimeout(() => {
       miner.style.opacity = 0;
       fix.style.visibility = 'visible';
@@ -26,4 +26,4 @@ function endShift() {
 }
 
 const button = document.getElementById('fix-this');
-button.addEventListener('click', endShift);
+button.addEventListener('click', endStick);

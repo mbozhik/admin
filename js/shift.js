@@ -1,5 +1,6 @@
 const virus = document.getElementById('virus');
 const fix = document.getElementById('virus-fix');
+const next = document.getElementById('next-machine');
 
 fix.style.visibility = 'hidden';
 
@@ -29,25 +30,23 @@ virus.addEventListener('mouseenter', function () {
 
 function endShift() {
    setTimeout(() => {
-      virus.style.opacity = 0;
+      virus.style.opacity = 0.5;
       fix.style.visibility = 'visible';
       fix.src = 'img/shift-fix.gif';
    }, 500);
 
    setTimeout(() => {
+      virus.style.opacity = 0;
+   }, 4000);
+
+   setTimeout(() => {
       fix.style.visibility = 'hidden';
-   }, 3900);
+   }, 5000);
+
+   setTimeout(() => {
+      next.classList.add('scaled');
+   }, 5100);
 }
 
 const button = document.getElementById('fix-this');
 button.addEventListener('click', endShift);
-
-function endShift() {
-   setTimeout(() => {
-      miner.style.opacity = 0;
-   }, 500);
-
-   setTimeout(() => {
-      fix.style.visibility = 'hidden';
-   }, 3900);
-}

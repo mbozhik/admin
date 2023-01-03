@@ -40,7 +40,7 @@ body.machine {
 
    #virus {
       position: fixed;
-      width: 25vw;
+      width: 35vw;
       top: 250px;
       left: 250px;
       transition: top 0.5s, left 0.5s;
@@ -59,12 +59,12 @@ body.machine {
          left: 1000px;
       }
       &.move4 {
-         top: 500px;
+         top: 300px;
          left: 300px;
       }
       &.move5 {
          top: 200px;
-         left: 600px;
+         left: 800px;
       }
    }
 
@@ -76,7 +76,8 @@ body.machine {
       animation: appear 1s ease, shake 0.25s ease infinite, cursor 2.5s ease infinite;
    }
 
-   #miner-fix {
+   #miner-fix,
+   #virus-fix {
       // display: none;
       position: absolute;
       top: 50%;
