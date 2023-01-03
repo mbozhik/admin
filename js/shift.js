@@ -1,21 +1,25 @@
 const element = document.getElementById('virus');
 
-element.style.top = '250px';
-element.style.left = '250px';
-
 element.addEventListener('mouseenter', function () {
-   element.style.top = '300px';
-   element.style.left = '900px';
+   element.classList.add('move');
    setTimeout(function () {
-      element.style.top = '100px';
-      element.style.left = '150px';
+      element.classList.remove('move');
+      element.classList.add('move2');
    }, 500);
    setTimeout(function () {
-      element.style.top = '100px';
-      element.style.left = '1000px';
-   }, 500);
+      element.classList.remove('move2');
+      element.classList.add('move3');
+   }, 1000);
    setTimeout(function () {
-      element.style.top = '100px';
-      element.style.left = '100px';
-   }, 500);
+      element.classList.remove('move3');
+      element.classList.add('move4');
+   }, 1500);
+   setTimeout(function () {
+      element.classList.remove('move4');
+      element.classList.add('move5');
+   }, 2000);
+   setTimeout(function () {
+      element.classList.remove('move5');
+      element.classList.add('move');
+   }, 2500);
 });
