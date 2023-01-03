@@ -7,7 +7,7 @@ body.machine {
    overflow: hidden;
 
    .desktop {
-      margin: 3vw 0 0 1vw;
+      margin: 6vw 0 0 1vw;
       width: 15%;
       display: flex;
       flex-direction: column;
@@ -73,7 +73,15 @@ body.machine {
    #miner {
       position: absolute;
       width: 25vw;
-      animation: appear 2s ease, shake 0.25s ease infinite, cursor 2.5s ease infinite;
+      animation: appear 1s ease, shake 0.25s ease infinite, cursor 2.5s ease infinite;
+   }
+
+   #miner-fix {
+      // display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
    }
 
    @keyframes appear {
