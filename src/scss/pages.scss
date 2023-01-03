@@ -6,6 +6,20 @@ body.machine {
    margin: 0px;
    overflow: hidden;
 
+   .desktop {
+      margin: 3vw 0 0 1vw;
+      width: 15%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 3vw;
+
+      img {
+         width: 80%;
+      }
+   }
+
    // multiple page
 
    .image {
