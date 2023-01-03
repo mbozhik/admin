@@ -11,6 +11,7 @@ function endShift() {
    setTimeout(() => {
       miner.style.opacity = 0;
       fix.style.display = 'block';
+      fix.src = 'img/stick-fix.gif';
    }, 500);
 
    setTimeout(() => {
