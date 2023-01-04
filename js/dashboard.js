@@ -1,8 +1,22 @@
 const wrapper = document.getElementById('wrapper');
+const adminText = document.getElementById('user');
+
+const body = document.body;
+body.style.transition = 'background-color .5s';
+const trotling = document.getElementById('trotling');
+const multiple = document.getElementById('multiple');
+const clippy = document.getElementById('clippy');
+const shift = document.getElementById('shift');
+const stick = document.getElementById('stick');
+
+const rootStyles = window.getComputedStyle(document.documentElement);
+const varBlack = rootStyles.getPropertyValue('--black');
+const varWhite = rootStyles.getPropertyValue('--white');
+const varSiren = rootStyles.getPropertyValue('--siren');
+
 wrapper.style.transform = 'translate(-17%, -40%)';
 
 function adminLogin() {
-   const adminText = document.getElementById('user');
    let adminLogIn = prompt('Enter your admin login:', 'admin');
 
    if (adminLogIn) {
@@ -11,10 +25,54 @@ function adminLogin() {
       adminText.innerHTML = 'Welcome, <span>unknown!</span>';
    }
 
-   const adminData = document.querySelector('.admin-data');
    setTimeout(() => {
       adminText.innerHTML = `${adminLogIn}`;
    }, 3000);
+
+   trotling.addEventListener('mouseenter', function () {
+      adminText.innerHTML = `<b>cpu trottling</b>`;
+      body.style.backgroundColor = varWhite;
+   });
+   trotling.addEventListener('mouseleave', function () {
+      adminText.innerHTML = `${adminLogIn}`;
+      body.style.backgroundColor = varBlack;
+   });
+
+   multiple.addEventListener('mouseenter', function () {
+      adminText.innerHTML = `<b>multi windows</b>`;
+      body.style.backgroundColor = varWhite;
+   });
+   multiple.addEventListener('mouseleave', function () {
+      adminText.innerHTML = `${adminLogIn}`;
+      body.style.backgroundColor = varBlack;
+   });
+
+   clippy.addEventListener('mouseenter', function () {
+      adminText.innerHTML = `<b>ai clippy</b>`;
+      body.style.backgroundColor = varWhite;
+   });
+   clippy.addEventListener('mouseleave', function () {
+      adminText.innerHTML = `${adminLogIn}`;
+      body.style.backgroundColor = varBlack;
+   });
+
+   shift.addEventListener('mouseenter', function () {
+      adminText.innerHTML = `<b>virus shift</b>`;
+      body.style.backgroundColor = varWhite;
+   });
+   shift.addEventListener('mouseleave', function () {
+      adminText.innerHTML = `${adminLogIn}`;
+      body.style.backgroundColor = varBlack;
+   });
+
+   stick.addEventListener('mouseenter', function () {
+      adminText.innerHTML = `<b>miner sticking</b>`;
+      body.style.backgroundColor = varWhite;
+   });
+   stick.addEventListener('mouseleave', function () {
+      adminText.innerHTML = `${adminLogIn}`;
+      body.style.backgroundColor = varBlack;
+   });
 }
 
 adminLogin();

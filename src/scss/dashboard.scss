@@ -21,7 +21,7 @@ body.dashboard {
       top: 37.5%;
       left: 50%;
       transform: translate(-49%, 100%);
-      z-index: -1;
+      z-index: 100;
       pointer-events: none;
       transform-origin: 50% 50%;
 
@@ -34,6 +34,11 @@ body.dashboard {
 
          span {
             color: var(--siren);
+         }
+
+         b {
+            color: var(--black);
+            font-weight: 600;
          }
       }
    }
