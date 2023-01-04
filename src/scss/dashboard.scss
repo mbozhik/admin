@@ -21,7 +21,7 @@ body.dashboard {
       top: 37.5%;
       left: 50%;
       transform: translate(-49%, 100%);
-      z-index: 100;
+      z-index: -1;
       pointer-events: none;
       transform-origin: 50% 50%;
 
@@ -53,7 +53,7 @@ body.dashboard {
          top: 46%;
          left: 50%;
          transform: translate(-48%, 100%);
-         z-index: 10;
+         z-index: 15;
          pointer-events: none;
          transform-origin: 50% 50%;
          animation: uncolorize 1.5s ease forwards;
@@ -141,18 +141,24 @@ body.dashboard {
          // }
 
          &:nth-child(2) {
+            position: inherit;
+            z-index: 100;
             background-color: var(--night);
             left: 45%;
             top: 15%;
          }
 
          &:nth-child(3) {
+            position: inherit;
+            z-index: 100;
             background-color: var(--night);
             left: 13%;
             top: 25%;
          }
 
          &:nth-child(4) {
+            position: inherit;
+            z-index: 100;
             background-color: var(--night);
             left: 67%;
             top: 47%;
