@@ -30,7 +30,7 @@ virus.addEventListener('mouseenter', function () {
 
 function endShift() {
    setTimeout(() => {
-      virus.style.opacity = 0.5;
+      virus.style.opacity = '0.5';
       fix.style.visibility = 'visible';
       fix.src = 'img/shift-fix.gif';
    }, 500);

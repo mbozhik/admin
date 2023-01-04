@@ -2,6 +2,8 @@ const miner = document.getElementById('miner');
 const fix = document.getElementById('miner-fix');
 const next = document.getElementById('next-machine');
 
+fix.style.visibility = 'hidden';
+
 document.addEventListener('mousemove', function (event) {
    miner.style.top = event.clientY - 225 + 'px';
    miner.style.left = event.clientX - 225 + 'px';
@@ -9,6 +11,7 @@ document.addEventListener('mousemove', function (event) {
 
 function endStick() {
    setTimeout(() => {
+      miner.style.opacity = '0.5';
       fix.style.visibility = 'visible';
       fix.src = 'img/stick-fix.gif';
    }, 500);
