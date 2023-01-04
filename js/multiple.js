@@ -40,8 +40,8 @@ window.onmousemove = (e) => handleOnMove(e);
 window.ontouchmove = (e) => handleOnMove(e.touches[0]);
 
 function endStick() {
-   window.onmousemove = null;
-   window.ontouchmove = null;
+   // window.onmousemove = null;
+   // window.ontouchmove = null;
 
    setTimeout(() => {
       for (let i = 0; i < images.length; i++) {

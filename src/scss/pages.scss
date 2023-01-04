@@ -76,6 +76,11 @@ body.machine {
       animation: appear 1s ease, shake 0.25s ease infinite, cursor 2.5s ease infinite;
    }
 
+   #program {
+      position: absolute;
+      width: 25vw;
+   }
+
    #miner-fix,
    #virus-fix {
       position: absolute;
@@ -95,7 +100,6 @@ body.machine {
          opacity: 1;
       }
    }
-
    @keyframes shake {
       0% {
          transform: translate(0, 0);
