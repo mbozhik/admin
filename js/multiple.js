@@ -39,7 +39,7 @@ window.onmousemove = (e) => handleOnMove(e);
 
 window.ontouchmove = (e) => handleOnMove(e.touches[0]);
 
-function endStick() {
+function endMultiple() {
    // window.onmousemove = null;
    // window.ontouchmove = null;
 
@@ -67,4 +67,4 @@ function endStick() {
 }
 
 const button = document.getElementById('fix-this');
-button.addEventListener('click', endStick);
+button.addEventListener('click', endMultiple);

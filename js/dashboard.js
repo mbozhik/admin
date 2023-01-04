@@ -30,7 +30,7 @@ function adminLogin() {
    }, 3000);
 
    trotling.addEventListener('mouseenter', function () {
-      adminText.innerHTML = `<b>cpu trottling</b>`;
+      adminText.innerHTML = `<b>cpu trotling</b>`;
       body.style.backgroundColor = varWhite;
    });
    trotling.addEventListener('mouseleave', function () {
