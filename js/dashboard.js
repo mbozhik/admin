@@ -53,7 +53,7 @@ function adminLogin() {
    });
 
    clippy.addEventListener('mouseenter', function () {
-      adminText.innerHTML = `<b>ai clippy</b>`;
+      adminText.innerHTML = `<b>clippy assistant</b>`;
       body.style.backgroundColor = varWhite;
       exitBtnSpan.style.color = varSiren;
    });

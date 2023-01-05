@@ -20,6 +20,20 @@ body.machine {
       }
    }
 
+   .desktop-clippy {
+      margin: -48vw 0 0 1vw;
+      width: 15%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 3vw;
+
+      img {
+         width: 80%;
+      }
+   }
+
    // multiple page
 
    .image {
@@ -90,7 +104,9 @@ body.machine {
 
    #miner-fix,
    #virus-fix,
-   #program-fix {
+   #program-fix,
+   #delete-fix {
+      z-index: 99;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -159,48 +175,84 @@ body.machine {
    }
 
    #dashboard {
-      left: 37vw;
+      left: 39.7vw;
       bottom: 1vw;
 
       span {
          margin-left: 0.5vw;
-      }
-   }
-
-   #ask-this {
-      left: 49.9vw;
-      bottom: 1vw;
-
-      span {
-         margin-right: 0.5vw;
       }
    }
 
    #fix-this {
-      left: 45vw;
+      left: 47.7vw;
       bottom: 1vw;
 
       span {
          margin-left: 0.5vw;
-      }
-   }
-
-   #get-answer {
-      left: 45.3vw;
-      bottom: 1vw;
-
-      span {
-         margin-left: 0.5vw;
-         margin-right: 0.5vw;
       }
    }
 
    #next-machine {
-      left: 54.8vw;
+      left: 52.7vw;
       bottom: 1vw;
 
       span {
          margin-right: 0.5vw;
+      }
+   }
+
+   // clippy page
+
+   .assistant {
+      // position: relative;
+      display: flex;
+      flex-direction: column;
+   }
+
+   #clippy {
+      // position: absolute;
+      width: 45vw;
+      margin: 3vw auto;
+      display: block;
+      z-index: -9;
+      animation: up-down 0.7s ease-in-out infinite;
+
+      @keyframes up-down {
+         0% {
+            transform: translateY(0);
+         }
+         50% {
+            transform: translateY(-25px);
+         }
+         100% {
+            transform: translateY(0);
+         }
+      }
+   }
+
+   .clippy-msg {
+      width: 20vw;
+      position: absolute;
+      z-index: 9;
+      top: 50%;
+      left: 50%;
+      transform: translate(-110%, 70%);
+   }
+
+   #clippy-2 {
+      margin-top: 10.2vw;
+      animation: scale-msg 1s ease infinite;
+
+      @keyframes scale-msg {
+         0% {
+            width: 20vw;
+         }
+         50% {
+            width: 25vw;
+         }
+         100% {
+            width: 20vw;
+         }
       }
    }
 

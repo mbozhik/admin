@@ -3,33 +3,34 @@
    <head>
       <meta charset="UTF-8" />
       <link rel="stylesheet" href="style.css" />
-      <title>AI Clippy | Windows assistant</title>
+      <title>Clippy | Windows assistant</title>
       <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
       <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
    </head>
    <body class="machine">
-      <img id="miner" src="img/stick-miner.png" />
+      <div class="assistant">
+         <img id="clippy" src="img/clippy.png" alt="clippy windows assistant" />
+         <img id="clippy-1" class="clippy-msg" src="img/clippy-1.svg" alt="clippy ask u" />
+         <img id="clippy-2" class="clippy-msg" src="img/clippy-2.svg" alt="clippy wanna help u" />
+      </div>
+      <div class="desktop-clippy">
+         <img class="desktop-item" src="img/desktop-item1.png" alt="" />
+         <img class="desktop-item" src="img/desktop-item2.png" alt="" />
+         <img class="desktop-item" src="img/desktop-item3.png" alt="" />
+      </div>
+      <img id="delete-fix" alt="cli use backup" />
       <a id="dashboard" class="meta-link" href="./dashboard.html">
          <i class="fa-sharp fa-solid fa-arrow-left"></i>
          <span>Dashboard</span>
       </a>
-      <button id="get-answer" class="meta-link">
-         <i class="fa-sharp fa-solid fa-question"></i>
-         <span>Get answer</span>
-         <i class="fa-sharp fa-solid fa-question"></i>
-      </button>
-      <!-- <button id="fix-this" class="meta-link">
+      <button id="fix-this" class="meta-link">
          <i class="fa-sharp fa-solid fa-keyboard"></i>
-         <span>Try</span>
-      </button> -->
-      <!-- <a id="ask-this" class="meta-link" href="./clippy.html">
-         <span>Ask</span>
-         <i class="fa-sharp fa-solid fa-question"></i>
-      </a> -->
+         <span>Fix</span>
+      </button>
       <a id="next-machine" class="meta-link" href="./shift.html">
-         <span>Error 493</span>
+         <span>Next machine</span>
          <i class="fa-sharp fa-solid fa-arrow-right"></i>
       </a>
       <script src="js/clippy.js"></script>

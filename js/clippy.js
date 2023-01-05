@@ -1,33 +1,54 @@
-const miner = document.getElementById('miner');
-const fix = document.getElementById('miner-fix');
+const assistant = document.getElementsByClassName('assistant');
+const fix = document.getElementById('delete-fix');
+const dsk = document.getElementsByClassName('desktop-item');
 const next = document.getElementById('next-machine');
 
+assistant[0].style.visibility = 'hidden';
 fix.style.visibility = 'hidden';
 
-// document.addEventListener('mousemove', function (event) {
-//    miner.style.top = event.clientY - 225 + 'px';
-//    miner.style.left = event.clientX - 225 + 'px';
-// });
+function clippy() {
+   setTimeout(() => {
+      assistant[0].style.visibility = 'visible';
 
-// function endStick() {
-//    setTimeout(() => {
-//       miner.style.opacity = '0.5';
-//       fix.style.visibility = 'visible';
-//       fix.src = 'img/stick-fix.gif';
-//    }, 500);
+      for (let i = 0; i < dsk.length; i++) {
+         setTimeout(() => {
+            dsk[i].style.opacity = 0;
+         }, 1000 * i);
+      }
+   }, 1000);
+}
 
-//    setTimeout(() => {
-//       miner.style.opacity = 0;
-//    }, 3000);
+clippy();
 
-//    setTimeout(() => {
-//       fix.style.visibility = 'hidden';
-//    }, 3900);
+function endClippy() {
+   setTimeout(() => {
+      for (let i = 0; i < assistant.length; i++) {
+         assistant[i].style.opacity = 0.2;
+      }
+      fix.style.visibility = 'visible';
+      fix.src = 'img/clippy-fix.gif';
+   }, 500);
 
-//    setInterval(() => {
-//       next.classList.add('scaled');
-//    }, 4100);
-// }
+   setTimeout(() => {
+      for (let i = 0; i < assistant.length; i++) {
+         assistant[i].style.opacity = 0;
+      }
+   }, 3000);
 
-// const button = document.getElementById('fix-this');
-// button.addEventListener('click', endStick);
+   setTimeout(() => {
+      for (let i = 0; i < dsk.length; i++) {
+         dsk[i].style.opacity = 1;
+      }
+   }, 6000);
+
+   setTimeout(() => {
+      fix.style.visibility = 'hidden';
+   }, 7000);
+
+   setInterval(() => {
+      next.classList.add('scaled');
+   }, 7200);
+}
+
+const button = document.getElementById('fix-this');
+button.addEventListener('click', endClippy);
