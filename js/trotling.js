@@ -48,7 +48,7 @@ function endTrotling() {
          images[i].style.opacity = 0.2;
       }
       fix.style.visibility = 'visible';
-      fix.src = 'img/multiple-fix.gif';
+      fix.src = 'img/trotling-fix.gif';
    }, 500);
 
    setTimeout(() => {
