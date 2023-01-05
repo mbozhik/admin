@@ -10,6 +10,7 @@ let clicked = false;
 document.addEventListener('click', function (event) {
    if (event.target.classList.contains('program')) {
       event.target.style.display = 'none';
+      showImages();
       let clicked = true;
    }
 });
