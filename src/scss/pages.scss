@@ -76,6 +76,13 @@ body.machine {
       animation: appear 1s ease, shake 0.25s ease infinite, cursor 2.5s ease infinite;
    }
 
+   #cpu-load {
+      position: absolute;
+      width: 20vw;
+      margin: 4vw;
+      box-shadow: 0 0 30px 2px #9146ff50;
+   }
+
    .program {
       position: absolute;
       width: 20vw;

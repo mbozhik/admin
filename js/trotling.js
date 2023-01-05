@@ -1,8 +1,10 @@
 const images = document.getElementsByClassName('program');
 const fix = document.getElementById('program-fix');
 const next = document.getElementById('next-machine');
+const load = document.getElementById('cpu-load');
 
 fix.style.visibility = 'hidden';
+load.style.visibility = 'visible';
 
 let clicked = false;
 document.addEventListener('click', function (event) {
@@ -30,6 +32,13 @@ function showImages() {
 
 const timeoutId = setTimeout(() => {
    showImages();
+   setTimeout(() => {
+      load.style.visibility = 'visible';
+      load.src = 'img/trotling-load.gif';
+   }, 0);
+   setTimeout(() => {
+      load.src = 'img/trotling-load.png';
+   }, 5500);
 }, 500);
 
 function endTrotling() {
@@ -42,10 +51,18 @@ function endTrotling() {
    }, 500);
 
    setTimeout(() => {
+      load.src = 'img/trotling-unload.png';
+   }, 1000);
+
+   setTimeout(() => {
       for (let i = 0; i < images.length; i++) {
          images[i].style.opacity = 0;
       }
    }, 3000);
+
+   setTimeout(() => {
+      load.style.visibility = 'hidden';
+   }, 3600);
 
    setTimeout(() => {
       fix.style.visibility = 'hidden';
