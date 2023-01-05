@@ -1,5 +1,6 @@
 const wrapper = document.getElementById('wrapper');
 const adminText = document.getElementById('user');
+const exitBtnSpan = document.getElementById('dashboard-exit');
 
 const body = document.body;
 body.style.transition = 'background-color .5s';
@@ -32,46 +33,56 @@ function adminLogin() {
    trotling.addEventListener('mouseenter', function () {
       adminText.innerHTML = `<b>cpu trotling</b>`;
       body.style.backgroundColor = varWhite;
+      exitBtnSpan.style.color = varSiren;
    });
    trotling.addEventListener('mouseleave', function () {
       adminText.innerHTML = `${adminLogIn}`;
       body.style.backgroundColor = varBlack;
+      exitBtnSpan.style.color = varWhite;
    });
 
    multiple.addEventListener('mouseenter', function () {
       adminText.innerHTML = `<b>multi windows</b>`;
       body.style.backgroundColor = varWhite;
+      exitBtnSpan.style.color = varSiren;
    });
    multiple.addEventListener('mouseleave', function () {
       adminText.innerHTML = `${adminLogIn}`;
       body.style.backgroundColor = varBlack;
+      exitBtnSpan.style.color = varWhite;
    });
 
    clippy.addEventListener('mouseenter', function () {
       adminText.innerHTML = `<b>ai clippy</b>`;
       body.style.backgroundColor = varWhite;
+      exitBtnSpan.style.color = varSiren;
    });
    clippy.addEventListener('mouseleave', function () {
       adminText.innerHTML = `${adminLogIn}`;
       body.style.backgroundColor = varBlack;
+      exitBtnSpan.style.color = varWhite;
    });
 
    shift.addEventListener('mouseenter', function () {
       adminText.innerHTML = `<b>virus shift</b>`;
       body.style.backgroundColor = varWhite;
+      exitBtnSpan.style.color = varSiren;
    });
    shift.addEventListener('mouseleave', function () {
       adminText.innerHTML = `${adminLogIn}`;
       body.style.backgroundColor = varBlack;
+      exitBtnSpan.style.color = varWhite;
    });
 
    stick.addEventListener('mouseenter', function () {
       adminText.innerHTML = `<b>miner sticking</b>`;
       body.style.backgroundColor = varWhite;
+      exitBtnSpan.style.color = varSiren;
    });
    stick.addEventListener('mouseleave', function () {
       adminText.innerHTML = `${adminLogIn}`;
       body.style.backgroundColor = varBlack;
+      exitBtnSpan.style.color = varWhite;
    });
 }
 
