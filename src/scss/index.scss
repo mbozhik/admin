@@ -17,6 +17,13 @@ body.index {
       }
    }
 
+   #no-mobile {
+      color: var(--white);
+      font-size: clamp(1.5rem, 2vw, 2rem);
+      text-align: center;
+      max-width: 90%;
+   }
+
    @keyframes blink {
       100% {
          opacity: 0;
