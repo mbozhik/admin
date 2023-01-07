@@ -19,9 +19,19 @@ body.index {
 
    #no-mobile {
       color: var(--white);
+      padding-top: 5vw;
+      margin: 15vw auto;
       font-size: clamp(1.5rem, 2vw, 2rem);
+      font-weight: 400;
       text-align: center;
       max-width: 90%;
+   }
+
+   #screencast {
+      max-width: 90%;
+      margin: 0 auto;
+      display: block;
+      // border: 1px solid white;
    }
 
    @keyframes blink {

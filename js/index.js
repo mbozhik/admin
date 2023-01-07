@@ -3,6 +3,11 @@ const text = document.querySelector('.console');
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
    text.style.display = 'none';
    document.getElementById('no-mobile').innerHTML = 'The Admin project is unavailable on mobile devices. Try it from your computer!';
+   setTimeout(function () {
+      document.getElementById('no-mobile').style.paddingTop = '45vw';
+      document.getElementById('no-mobile').innerHTML = 'to adapt it would be crazy :)';
+      document.getElementById('screencast').src = 'img/screencast.gif';
+   }, 5000);
 } else {
    const confirmLogin = confirm('Log in as an administrator?');
    const words = ['run..', 'initialize..', 'log in..'];
