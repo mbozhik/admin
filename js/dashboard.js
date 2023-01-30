@@ -10,6 +10,9 @@ const clippy = document.getElementById('clippy');
 const shift = document.getElementById('shift');
 const stick = document.getElementById('stick');
 
+const aim = document.getElementById('aim');
+const draw = document.getElementById('draw');
+
 const rootStyles = window.getComputedStyle(document.documentElement);
 const varBlack = rootStyles.getPropertyValue('--black');
 const varWhite = rootStyles.getPropertyValue('--white');
@@ -83,6 +86,33 @@ function adminLogin() {
       adminText.innerHTML = `${adminLogIn}`;
       body.style.backgroundColor = varBlack;
       exitBtnSpan.style.color = varWhite;
+   });
+   aim.addEventListener('mouseenter', function () {
+      adminText.innerHTML = `<b>aim game</b>`;
+      body.style.backgroundColor = varWhite;
+      exitBtnSpan.style.color = varSiren;
+   });
+   aim.addEventListener('mouseleave', function () {
+      adminText.innerHTML = `${adminLogIn}`;
+      body.style.backgroundColor = varBlack;
+      exitBtnSpan.style.color = varWhite;
+   });
+   draw.addEventListener('mouseenter', function () {
+      adminText.innerHTML = `<b>draw game</b>`;
+      body.style.backgroundColor = varWhite;
+      exitBtnSpan.style.color = varSiren;
+   });
+   draw.addEventListener('mouseleave', function () {
+      adminText.innerHTML = `${adminLogIn}`;
+      body.style.backgroundColor = varBlack;
+      exitBtnSpan.style.color = varWhite;
+   });
+
+   aim.addEventListener('click', function () {
+      window.location.href = './aim.html';
+   });
+   draw.addEventListener('click', function () {
+      window.location.href = './draw.html';
    });
 }
 

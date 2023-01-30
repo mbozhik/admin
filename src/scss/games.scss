@@ -1,0 +1,173 @@
+body.game {
+   //* aim game
+
+   font-family: 'Inter';
+   color: var(--white);
+   height: 100vh;
+   overflow: hidden;
+   margin: 0;
+   text-align: center;
+
+   & a {
+      color: var(--white);
+
+      &:hover {
+         color: var(--green);
+      }
+   }
+
+   & h1 {
+      line-height: 1.4;
+      font-size: 4rem;
+      color: var(--green);
+   }
+
+   .screen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      width: 100vw;
+      transition: margin 0.5s ease-out;
+      background: var(--black);
+
+      .buttons {
+         margin-top: 1.5vw;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         gap: 0.25vw;
+
+         a {
+            font-size: 1.5rem;
+         }
+      }
+   }
+
+   .screen.up {
+      margin-top: -100vh;
+   }
+
+   .time-list {
+      margin-top: 2.5vw;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+
+      & li {
+         margin: 10px;
+      }
+   }
+
+   .time-btn {
+      background-color: transparent;
+      border: 2px solid var(--white);
+      color: var(--white);
+      cursor: pointer;
+      font-family: inherit;
+      padding: 0.5rem 1rem;
+      font-size: 1.5rem;
+
+      &:hover {
+         border: 2px solid var(--green);
+         color: var(--green);
+      }
+   }
+
+   .win-switch {
+      width: 120px;
+      height: 30px;
+      background: var(--white);
+      color: var(--black);
+      font-size: 1.2rem;
+      margin-top: 20px;
+      cursor: pointer;
+
+      & :hover {
+         background: var(--green);
+         color: var(--grey);
+      }
+   }
+
+   .play-again {
+      color: var(--white);
+      cursor: pointer;
+
+      &:hover {
+         color: var(--green);
+      }
+   }
+
+   .hide {
+      opacity: 0;
+   }
+
+   .primary {
+      color: var(--green);
+   }
+
+   .board {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      width: 500px;
+      height: 500px;
+      background: #2b2b2b;
+      box-shadow: 0px 0px 20px #2b2b2b;
+      overflow: hidden;
+   }
+   & h3 {
+      padding-bottom: 1%;
+   }
+   .circle {
+      background: linear-gradient(90deg, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
+      position: absolute;
+      border-radius: 50%;
+      cursor: pointer;
+   }
+
+   //* draw game
+
+   .block {
+      height: 100vh;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .container {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-wrap: wrap;
+         max-width: 490px;
+
+         .square {
+            width: 20px;
+            height: 20px;
+            background-color: #1d1d1d;
+            margin: 2px;
+            box-shadow: 0 0 2px var(--black);
+            transition: 5s ease;
+
+            &:hover {
+               transition-duration: 0s;
+            }
+         }
+      }
+   }
+
+   //* Кнопки назад и глянуть жиэсс проекты
+   .first-btn {
+      margin-top: 3vw;
+   }
+}
+
+body.draw {
+   background-color: var(--black);
+}

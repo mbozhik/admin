@@ -2,12 +2,14 @@
 @import 'css/index.css';
 @import 'css/dashboard.css';
 @import 'css/pages.css';
+@import 'css/games.css';
 
 :root {
    --black: #0a0a0a;
    --white: #eee;
    --night: #171717;
    --siren: #9146ff;
+   --green: #cbfb45;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');

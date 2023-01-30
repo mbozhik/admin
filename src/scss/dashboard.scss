@@ -165,6 +165,47 @@ body.dashboard {
             top: 73%;
          }
       }
+
+      .game {
+         width: 5vw;
+         height: 5vw;
+         position: absolute;
+         transition: transform 800ms ease;
+
+         &:hover {
+            transform: scale(1.05);
+         }
+
+         &:hover #user {
+            color: var(--siren);
+         }
+      }
+
+      #draw {
+         position: inherit;
+         z-index: 100;
+         background-color: var(--siren);
+         left: 15%;
+         top: 60%;
+      }
+
+      #aim {
+         position: inherit;
+         z-index: 100;
+         background-color: var(--siren);
+         left: 55%;
+         top: 40%;
+      }
+
+      #draw,
+      #aim {
+         cursor: pointer;
+
+         &:hover {
+            transform: scale(1.2);
+            border-radius: 5%;
+         }
+      }
    }
 
    #log-out {
